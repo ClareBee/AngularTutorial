@@ -93,3 +93,13 @@ import { HttpClientModule } from '@angular/common/http';
 ```
 and add to imports array. Then inject into the constructor of the service you're using.
 NB multiple components can leverage the same service
+
+call in the `ngOnInit` lifecycle method and use an async pipe in the template:
+e.g.
+```html
+// shipping.component.html
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
+```
