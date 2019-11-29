@@ -39,3 +39,18 @@ Component (as an aread of responsibility in the UI that lets you reuse sets of U
     - A component class that handles data and functionality.
     - An HTML template that determines the UI. 
     - Component-specific styles that define the look and feel.
+
+```javascript
+@Component({
+  selector: 'app-product-alerts',
+  templateUrl: './product-alerts.component.html',
+  styleUrls: ['./product-alerts.component.css']
+})
+```
+@Component decorator indicates it's a component and provides metadata:
+- selector = identifier for html element
+- template = content of html
+- styleUrls = stylesheet
+
+@Input() decorator indicates that property value passes in from component's parent (cf props)
+@Output() decorator and an instance of EventEmitter() => allows component to emit an event when the value of the property changes.
