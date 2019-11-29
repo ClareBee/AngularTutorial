@@ -30,3 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 `*ngFor` = 'structural directive' which shape/reshape DOM structure (marked by asterix)
 `{{}}` = interpolation syntax (renders property value as text)
 `[]` = property binding syntax (lets you use property value in a template expression)
+`()` = event binding (e.g. ` <button (click)="share()">`)
