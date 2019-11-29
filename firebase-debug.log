@@ -1,0 +1,47 @@
+[debug] [2019-11-29T15:40:46.474Z] ----------------------------------------------------------------------
+[debug] [2019-11-29T15:40:46.476Z] Command:       /home/clare/.nvm/versions/node/v12.13.0/bin/node /home/clare/.nvm/versions/node/v12.13.0/bin/firebase login
+[debug] [2019-11-29T15:40:46.476Z] CLI Version:   7.8.1
+[debug] [2019-11-29T15:40:46.476Z] Platform:      linux
+[debug] [2019-11-29T15:40:46.476Z] Node Version:  v12.13.0
+[debug] [2019-11-29T15:40:46.476Z] Time:          Fri Nov 29 2019 15:40:46 GMT+0000 (Greenwich Mean Time)
+[debug] [2019-11-29T15:40:46.477Z] ----------------------------------------------------------------------
+[debug] [2019-11-29T15:40:46.477Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=891317773&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2019-11-29T15:41:24.584Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+
+[debug] [2019-11-29T15:41:24.725Z] Token Fetch Error: FirebaseError: Server Error. unable to verify the first certificate
+    at Request._callback (/home/clare/.nvm/versions/node/v12.13.0/lib/node_modules/firebase-tools/lib/api.js:30:31)
+    at self.callback (/home/clare/.nvm/versions/node/v12.13.0/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:476:20)
+    at Request.onRequestError (/home/clare/.nvm/versions/node/v12.13.0/lib/node_modules/firebase-tools/node_modules/request/request.js:881:8)
+    at ClientRequest.emit (events.js:210:5)
+    at ClientRequest.EventEmitter.emit (domain.js:476:20)
+    at TLSSocket.socketErrorListener (_http_client.js:406:9)
+    at TLSSocket.emit (events.js:210:5)
+    at TLSSocket.EventEmitter.emit (domain.js:476:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[debug] [2019-11-29T15:41:57.940Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+
+[debug] [2019-11-29T15:41:58.078Z] Token Fetch Error: FirebaseError: Server Error. unable to verify the first certificate
+    at Request._callback (/home/clare/.nvm/versions/node/v12.13.0/lib/node_modules/firebase-tools/lib/api.js:30:31)
+    at self.callback (/home/clare/.nvm/versions/node/v12.13.0/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:476:20)
+    at Request.onRequestError (/home/clare/.nvm/versions/node/v12.13.0/lib/node_modules/firebase-tools/node_modules/request/request.js:881:8)
+    at ClientRequest.emit (events.js:210:5)
+    at ClientRequest.EventEmitter.emit (domain.js:476:20)
+    at TLSSocket.socketErrorListener (_http_client.js:406:9)
+    at TLSSocket.emit (events.js:210:5)
+    at TLSSocket.EventEmitter.emit (domain.js:476:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)

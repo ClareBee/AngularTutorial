@@ -6,35 +6,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
 ## Learning Notes
-`*ngFor` = 'structural directive' which shape/reshape DOM structure (marked by asterix)
-`{{}}` = interpolation syntax (renders property value as text)
-`[]` = property binding syntax (lets you use property value in a template expression)
-`()` = event binding (e.g. ` <button (click)="share()">`)
+- `*ngFor`/`ngIf` = 'structural directives' which shape/reshape DOM structure (marked by asterix)
+- `{{}}` = interpolation syntax (renders property value as text)
+- `[]` = property binding syntax (lets you use property value in a template expression)
+- `()` = event binding (e.g. ` <button (click)="share()">`)
 
 ### Components
-Angular App = tree of components
-Component (as an aread of responsibility in the UI that lets you reuse sets of UI functionality):
+Angular App => tree of components
+
+**Component** (as an area of responsibility in the UI that lets you reuse sets of UI functionality):
 
     - A component class that handles data and functionality.
     - An HTML template that determines the UI. 
@@ -47,18 +28,19 @@ Component (as an aread of responsibility in the UI that lets you reuse sets of U
   styleUrls: ['./product-alerts.component.css']
 })
 ```
-@Component decorator indicates it's a component and provides metadata:
+**@Component decorator** indicates it's a component and provides metadata:
 - selector = identifier for html element
 - template = content of html
 - styleUrls = stylesheet
 
-@Input() decorator indicates that property value passes in from component's parent (cf props)
-@Output() decorator and an instance of EventEmitter() => allows component to emit an event when the value of the property changes.
+**@Input() decorator** indicates that property value passes in from component's parent (cf props)
+**@Output() decorator** and an instance of EventEmitter() => allows component to emit an event when the value of the property changes.
 
 ### Routing
-declares in app.module.ts in the RouterModule
-RouterLink directive =  routerLink defines how the user navigates to the route (or URL) declaratively in the component template.
+- Declared in app.module.ts in the RouterModule
+- RouterLink directive = `routerLink` defines how the user navigates to the route (or URL) declaratively in the component template.
 (`index as` assigns index when iterating over a list)
+
 e.g.
 ```javascript
 <div *ngFor="let product of products; index as productId">
@@ -91,10 +73,10 @@ Subscribe to the route params in the `ngOnInit()` lifecycle hook which Angular c
 // app.module.ts
 import { HttpClientModule } from '@angular/common/http';
 ```
-and add to imports array. Then inject into the constructor of the service you're using.
+And add to imports array. Then inject into the constructor of the service you're using.
 NB multiple components can leverage the same service
 
-call in the `ngOnInit` lifecycle method and use an async pipe in the template:
+Call in the `ngOnInit` lifecycle method and use an async pipe in the template:
 e.g.
 ```html
 // shipping.component.html
@@ -134,11 +116,19 @@ Angular's FormBuilder - import and inject (provided by ReactiveFormsModule)
 ```
 
 ### Deployment
-`ng build --prod`
+- `ng build --prod`
 generates static files in dist/my-project-name => easy to host 
 e.g. on [Firebase](https://firebase.google.com/)
-`npm install -g firebase-tools`
-`firebase login`
-`firebase init` (creates firebase.json)
+- `npm install -g firebase-tools`
+- `firebase login`
+- `firebase init` (creates firebase.json)
 (selecting dist/my-project-name as the public directory)
-`firebase deploy`
+- `firebase deploy`
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
