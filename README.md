@@ -54,3 +54,20 @@ Component (as an aread of responsibility in the UI that lets you reuse sets of U
 
 @Input() decorator indicates that property value passes in from component's parent (cf props)
 @Output() decorator and an instance of EventEmitter() => allows component to emit an event when the value of the property changes.
+
+### Routing
+declares in app.module.ts in the RouterModule
+RouterLink directive =  routerLink defines how the user navigates to the route (or URL) declaratively in the component template.
+(`index as` assigns index when iterating over a list)
+e.g.
+```javascript
+<div *ngFor="let product of products; index as productId">
+
+  <h3>
+    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+      {{ product.name }}
+    </a>
+  </h3>
+<!-- . . . -->
+</div>
+```
