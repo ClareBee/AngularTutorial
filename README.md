@@ -81,3 +81,15 @@ Subscribe to the route params in the `ngOnInit()` lifecycle hook which Angular c
 > In Angular, a service is an instance of a class that can be made available to any part of your application using Angular's dependency injection system.
 
 > Services are the place where you share data between parts of your application.
+
+### Angular HTTP client
+> Data returned from servers often takes the form of a stream. Streams are useful because they make it easy to transform the data that is returned, and to make modifications to the way data is requested. The Angular HTTP client (HttpClient) is a built-in way to fetch data from external APIs and provide them to your application as a stream.
+
+> Angular's HttpClientModule registers the providers needed to use a single instance of the HttpClient service throughout your app. The HttpClient service is what you inject into your services to fetch data and interact with external APIs and resources.
+
+```javascript
+// app.module.ts
+import { HttpClientModule } from '@angular/common/http';
+```
+and add to imports array. Then inject into the constructor of the service you're using.
+NB multiple components can leverage the same service
