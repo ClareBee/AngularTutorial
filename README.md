@@ -31,3 +31,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 `{{}}` = interpolation syntax (renders property value as text)
 `[]` = property binding syntax (lets you use property value in a template expression)
 `()` = event binding (e.g. ` <button (click)="share()">`)
+
+### Components
+Angular App = tree of components
+Component (as an aread of responsibility in the UI that lets you reuse sets of UI functionality):
+
+    - A component class that handles data and functionality.
+    - An HTML template that determines the UI. 
+    - Component-specific styles that define the look and feel.
