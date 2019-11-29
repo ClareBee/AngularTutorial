@@ -132,3 +132,13 @@ Angular's FormBuilder - import and inject (provided by ReactiveFormsModule)
 
 </form>
 ```
+
+### Deployment
+`ng build --prod`
+generates static files in dist/my-project-name => easy to host 
+e.g. on [Firebase](https://firebase.google.com/)
+`npm install -g firebase-tools`
+`firebase login`
+`firebase init` (creates firebase.json)
+(selecting dist/my-project-name as the public directory)
+`firebase deploy`
