@@ -28,4 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Learning Notes
 `*ngFor` = 'structural directive' which shape/reshape DOM structure (marked by asterix)
-`{{}}` = interpolation syntax
+`{{}}` = interpolation syntax (renders property value as text)
+`[]` = property binding syntax (lets you use property value in a template expression)
