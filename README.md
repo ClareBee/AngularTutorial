@@ -76,3 +76,8 @@ Inject ActivatedRoute into the constructor of the iterable:
 > The ActivatedRoute is specific to each routed component loaded by the Angular Router. It contains information about the route, its parameters, and additional data associated with the route.
 
 Subscribe to the route params in the `ngOnInit()` lifecycle hook which Angular calls shortly after creating a component
+
+### Services
+> In Angular, a service is an instance of a class that can be made available to any part of your application using Angular's dependency injection system.
+
+> Services are the place where you share data between parts of your application.
