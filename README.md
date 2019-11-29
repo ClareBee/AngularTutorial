@@ -108,3 +108,27 @@ e.g.
 > Forms in Angular take the standard capabilities of the HTML based forms and add an orchestration layer to help with creating custom form controls, and to supply great validation experiences. There are two parts to an Angular Reactive form, the objects that live in the component to store and manage the form, and the visualization of the form that lives in the template.
 
 Angular's FormBuilder - import and inject (provided by ReactiveFormsModule)
+
+- **formGroup** property binding to bind checkoutForm property to tag
+- **ngSubmit** event binding to listen for form submission and call onSubmit()
+- **formControlName** attribute binding to bind checkoutForm form controls for name/address to input fields
+
+```html
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div>
+    <label for="address">
+      Address
+    </label>
+    <input id="address" type="text" formControlName="address">
+  </div>
+  <button class="button" type="submit">Purchase</button>
+
+</form>
+```
