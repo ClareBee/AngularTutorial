@@ -1,6 +1,6 @@
-<h3>Cart</h3>
+<h2 class="mat-display-2">Cart</h2>
 <p>
-  <a routerLink="/shipping">Shipping Prices</a>
+  <a mat-raised-button color="primary" routerLink="/shipping">Shipping Prices</a>
 </p>
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
@@ -21,6 +21,6 @@
     </label>
     <input id="address" type="text" formControlName="address">
   </div>
-  <button class="button" type="submit">Purchase</button>
+  <button mat-raised-button type="submit">Purchase</button>
 
 </form>

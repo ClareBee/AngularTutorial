@@ -1,22 +1,30 @@
-<h2>Products</h2>
+<h2 class="mat-display-2">Products</h2>
+<mat-grid-list cols="4" rowHeight="1:2" gutterSize="20px">
 <!-- index as assigns an index when iterating over list -->
-<div *ngFor="let product of products; index as productId">
-  <h3>
-    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
-      {{ product.name }}
-    </a>
-  </h3>
+  <mat-grid-tile *ngFor="let product of products; index as productId">
+    <mat-card>
+      <a class="product-link" [title]="product.name + ' details'" [routerLink]="['/products', productId]">
 
-  <p *ngIf="product.description">
-    Description: {{ product.description }}
-  </p>
-
-  <button (click)="share()">
-    Share
-  </button>
-  <app-product-alerts
-    [product]="product"
-    (notify)="onNotify()"
-    >
-  </app-product-alerts>
-</div>
+      <mat-card-header>
+        <mat-card-title>
+          {{ product.name }}
+        </mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="https://placeimg.com/100/100/any" alt="Who else but Bill Murray">
+      </a>
+      <mat-card-content *ngIf="product.description">
+        <p>Description: {{ product.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="share()" mat-raised-button color="primary">
+          Share
+        </button>
+        <app-product-alerts
+          [product]="product"
+          (notify)="onNotify()"
+          >
+        </app-product-alerts>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

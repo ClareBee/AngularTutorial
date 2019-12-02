@@ -132,3 +132,17 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+
+## Styling with [Angular Material](https://material.angular.io)
+`ng add @angular/material`
+=> installs Angular Material, the Component Dev Kit (CDK), Angular Animations, prebuilt/custom theme option, HammerJS for gesture recognition, BrowserAnimations, Roboto font, Material design icon font
+
+
+- Prebuilt & Custom themes
+- Schematics e.g. Address form, navigation, table, dashboard, tree, drag and drop
+ Navigation schematic
+e.g.
+>The navigation schematic will create a new component that includes a toolbar with the app name and a responsive side nav based on Material breakpoints.
+
+`ng generate @angular/material:nav <component-name>`
