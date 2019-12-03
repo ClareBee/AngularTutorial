@@ -1,8 +1,10 @@
-<h2 class="mat-display-2">Product Details</h2>
+<div class="details">
+  <h1 class="mat-h1">Product Details</h1>
 
-<div *ngIf="product">
-  <h3>{{ product.name }}</h3>
-  <h4>{{ product.price | currency }}</h4>
-  <p>{{ product.description }}</p>
-  <button (click)="addToCart(product)">Buy</button>
+  <div *ngIf="product">
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.price | currency }}</h4>
+    <p>{{ product.description }}</p>
+    <button mat-raised-button color="primary" (click)="addToCart(product)">Buy</button>
+  </div>
 </div>
