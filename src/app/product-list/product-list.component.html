@@ -1,30 +1,32 @@
-<h1 class="mat-h1">Products</h1>
-<mat-grid-list cols="4" rowHeight="1:2" gutterSize="20px">
-<!-- index as assigns an index when iterating over list -->
-  <mat-grid-tile *ngFor="let product of products; index as productId">
-    <mat-card>
-      <a class="product-link" [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+<div class="page">
+  <h1 class="mat-h1">Products</h1>
+  <mat-grid-list [cols]="breakpoint" rowHeight="1:2" gutterSize="20px" (window:resize)="onResize($event)">
+  <!-- index as assigns an index when iterating over list -->
+    <mat-grid-tile *ngFor="let product of products; index as productId">
+      <mat-card>
+        <a class="product-link" [title]="product.name + ' details'" [routerLink]="['/products', productId]">
 
-      <mat-card-header>
-        <mat-card-title>
-          {{ product.name }}
-        </mat-card-title>
-      </mat-card-header>
-      <img mat-card-image src="https://placeimg.com/100/100/any" alt="Who else but Bill Murray">
-      </a>
-      <mat-card-content *ngIf="product.description">
-        <p>Description: {{ product.description }}</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button (click)="share()" mat-raised-button color="primary">
-          Share
-        </button>
-        <app-product-alerts
-          [product]="product"
-          (notify)="onNotify()"
-          >
-        </app-product-alerts>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+        <mat-card-header>
+          <mat-card-title>
+            {{ product.name }}
+          </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://placeimg.com/100/100/any" alt="Who else but Bill Murray">
+        </a>
+        <mat-card-content *ngIf="product.description">
+          <p>Description: {{ product.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="share()" mat-raised-button color="primary">
+            Share
+          </button>
+          <app-product-alerts
+            [product]="product"
+            (notify)="onNotify()"
+            >
+          </app-product-alerts>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

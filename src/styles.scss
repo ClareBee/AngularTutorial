@@ -10,9 +10,7 @@
 
 html,
 body,
-.cart,
-.prices,
-.details {
+.page {
   height: 100vh;
 }
 
@@ -64,6 +62,9 @@ app-top-bar {
   background-color: #ddd;
   a {
     text-decoration: none;
+    &:active {
+      color: black;
+    }
   }
   .fancy-button {
     font-size: 24px;
@@ -112,6 +113,9 @@ mat-card-actions {
   margin-bottom: 10px;
 }
 
+mat-card {
+  min-width: 200px !important;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.
