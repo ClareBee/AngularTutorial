@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-![Main index]()
+![Main index](https://github.com/ClareBee/AngularTutorial/blob/master/assets/index.png)
 
 ## Learning Notes
 - `*ngFor`/`ngIf` = 'structural directives' which shape/reshape DOM structure (marked by asterix)
